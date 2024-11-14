@@ -1,11 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
-body{
+body {
   font-family: "Red Hat Display", sans-serif;
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 185px;
+  left: -35%;
+}
+.swiper-pagination-bullet {
+  background: white !important;
+  border: 2 px solid white;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: transparent !important;
+  border: 2px solid white;
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  margin: 8px !important;
 }

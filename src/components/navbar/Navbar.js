@@ -6,12 +6,20 @@ import MegaBox from "./MegaBox";
 import { megaDataOne, megaDataThree, megaDatatwo } from "../../data/megadata";
 const Navbar = () => {
   const [navmenu, setnavmenu] = useState(false);
-  const [megamenu, setmegamenu] = useState(true);
+  const [megamenu, setmegamenu] = useState(false);
   return (
-    <nav className="bg-white border-gray-200">
-      <HeaderTop />
+    <nav
+      className={`  border-gray-200 fixed z-50 w-full ${
+        megamenu ? "bg-white" : "bg-transparent"
+      }`}
+    >
+      <HeaderTop megamenu={megamenu} />
       <div className="flex flex-wrap justify-between items-center container mx-auto px-4 py-[30px]">
-        <a className="text-black  text-[32px] font-medium leading-[25px] uppercase">
+        <a
+          className={` text-[32px] font-medium leading-[25px] uppercase ${
+            !megamenu ? "text-white" : "text-black "
+          }`}
+        >
           Logo
         </a>
         <button
@@ -23,36 +31,58 @@ const Navbar = () => {
         <div className="items-center justify-between hidden w-full md:flex md:w-auto">
           <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-10 rtl:space-x-reverse">
             <li>
-              <a className="block  text-[#7B7B7B] hover:text-[#EA4715] ">
+              <a
+                className={`block   hover:text-[#EA4715] ${
+                  !megamenu ? "text-white" : "text-[#7B7B7B]"
+                }`}
+              >
                 Home
               </a>
             </li>
             <li>
               <button
                 onClick={() => setmegamenu(!megamenu)}
-                className="flex items-center justify-between w-full  font-medium text-gray-900  hover:text-[#EA4715]"
+                className={`flex items-center justify-between w-full  font-medium ${
+                  !megamenu ? "text-white" : "text-gray-900 "
+                } hover:text-[#EA4715]`}
               >
                 Company
                 <MdKeyboardArrowDown size={20} />
               </button>
             </li>
             <li>
-              <a className="block  text-[#7B7B7B] hover:text-[#EA4715] ">
+              <a
+                className={`block   hover:text-[#EA4715] ${
+                  !megamenu ? "text-white" : "text-[#7B7B7B]"
+                }`}
+              >
                 About
               </a>
             </li>
             <li>
-              <a className="block  text-[#7B7B7B] hover:text-[#EA4715] ">
+              <a
+                className={`block   hover:text-[#EA4715] ${
+                  !megamenu ? "text-white" : "text-[#7B7B7B]"
+                }`}
+              >
                 Projects
               </a>
             </li>
             <li>
-              <a className="block  text-[#7B7B7B] hover:text-[#EA4715] ">
+              <a
+                className={`block   hover:text-[#EA4715] ${
+                  !megamenu ? "text-white" : "text-[#7B7B7B]"
+                }`}
+              >
                 Sustainability
               </a>
             </li>
             <li>
-              <a className="block  text-[#7B7B7B] hover:text-[#EA4715] ">
+              <a
+                className={`block   hover:text-[#EA4715] ${
+                  !megamenu ? "text-white" : "text-[#7B7B7B]"
+                }`}
+              >
                 More
               </a>
             </li>
@@ -60,9 +90,17 @@ const Navbar = () => {
         </div>
         <div className="flex gap-[30px]">
           <button>
-            <IoSearchOutline className="w-4 h-4" />
+            <IoSearchOutline
+              className={`w-4 h-4 ${megamenu ? "text-black" : "text-white"}`}
+            />
           </button>
-          <button className="text-[15px] font-[500]">Sign in</button>
+          <button
+            className={`text-[15px] font-[500] ${
+              megamenu ? "text-black" : "text-white"
+            }`}
+          >
+            Sign in
+          </button>
         </div>
       </div>
       {megamenu && (
@@ -88,7 +126,7 @@ const Navbar = () => {
                     <p className="font-normal text-[14px] py-2 w-[270px]">
                       Our most popular bifold. Perfect for thermal efficiency.
                     </p>
-                    <button className="font-normal text-[14px] underline">
+                    <button className="font-normal text-[14px] hover:underline duration-300 transition-all">
                       Create your own
                     </button>
                   </div>
