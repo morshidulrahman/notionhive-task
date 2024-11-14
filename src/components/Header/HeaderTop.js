@@ -4,7 +4,7 @@ import { FiPhone } from "react-icons/fi";
 const HeaderTop = () => {
   return (
     <div className="border-b border-b-black/20">
-      <div className="container mx-auto flex items-center justify-between ">
+      <div className="container mx-auto flex items-center justify-between px-4">
         <div className="text-[15px]  flex items-center gap-3">
           <span className="block">
             <FiPhone className="w-4 h-4" />
