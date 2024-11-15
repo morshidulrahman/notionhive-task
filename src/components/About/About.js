@@ -1,4 +1,5 @@
 import React from "react";
+import CarouselComponent from "./CarouselComponent";
 
 const About = () => {
   return (
@@ -11,16 +12,7 @@ const About = () => {
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation.
       </p>
-      <div className="flex">
-        <div>
-          <img
-            src="/RectangleWmen.png"
-            alt="women"
-            className="w-[488px] h-[465px]"
-          />
-        </div>
-        <div className="h-[324px] w-[156px] bg-[#EA4715]"></div>
-      </div>
+      <CarouselComponent />
     </div>
   );
 };
