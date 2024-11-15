@@ -4,7 +4,7 @@ import { FiPhone } from "react-icons/fi";
 const HeaderTop = ({ megamenu }) => {
   return (
     <div
-      className={`border-b  ${
+      className={`border-b md:block hidden ${
         megamenu ? "border-b-black/20" : "border-b-white/20"
       }`}
     >

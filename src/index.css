@@ -8,22 +8,39 @@ body {
   font-family: "Red Hat Display", sans-serif;
 }
 
-.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 185px;
-  left: -35%;
-}
 .swiper-pagination-bullet {
-  background: white !important;
-  border: 2 px solid white;
-  opacity: 1 !important;
-}
-.swiper-pagination-bullet-active {
-  background-color: transparent !important;
-  border: 2px solid white;
+  display: none;
 }
 
-.swiper-pagination-bullet {
-  width: 10px !important;
-  height: 10px !important;
-  margin: 8px !important;
+@media (min-width: 768px) {
+  .comercial:nth-child(2) .comercial-imgbox {
+    position: relative;
+  }
+
+  .comercial:nth-child(2) .comercial-imgbox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -67.5px;
+    width: 1px;
+    height: 100%;
+    background: #747474;
+    z-index: 1;
+  }
+
+  .comercial:nth-child(2) .comercial-imgbox::after,
+  .comercial:nth-child(2) .comercial-imgbox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -67.5px;
+    width: 1px;
+    height: 100%;
+    background: #747474;
+    z-index: 1;
+  }
+  .comercial:nth-child(2) .comercial-imgbox::before {
+    right: -67.5px;
+    left: auto;
+  }
 }

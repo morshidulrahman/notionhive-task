@@ -4,6 +4,7 @@ import HeaderTop from "../Header/HeaderTop";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import MegaBox from "./MegaBox";
 import { megaDataOne, megaDataThree, megaDatatwo } from "../../data/megadata";
+import { IoMdMenu } from "react-icons/io";
 
 const Navbar = () => {
   const [navmenu, setnavmenu] = useState(false);
@@ -43,13 +44,8 @@ const Navbar = () => {
         >
           Logo
         </a>
-        <button
-          type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-        >
-          close
-        </button>
-        <div className="items-center justify-between hidden w-full md:flex md:w-auto">
+
+        <div className="items-center justify-between hidden w-full lg:flex md:w-auto">
           <ul className="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-10 rtl:space-x-reverse">
             <li>
               <a
@@ -109,7 +105,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex gap-[30px]">
+        <div className=" gap-[30px] hidden md:flex">
           <button>
             <IoSearchOutline
               className={`w-4 h-4 ${
@@ -125,6 +121,15 @@ const Navbar = () => {
             Sign in
           </button>
         </div>
+        <button
+          type="button"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden  "
+        >
+          <IoMdMenu
+            size={26}
+            className={`${scrolled ? "text-black" : "text-white"}`}
+          />
+        </button>
       </div>
       {megamenu && (
         <div className="mt-1 bg-white border-t border-t-black/20 shadow-sm">
