@@ -2,6 +2,7 @@ import React from "react";
 import { FaPlus } from "react-icons/fa";
 import { SwiperSlide, Swiper } from "swiper/react";
 import BlogSwiper from "./BlogSwiper";
+import { FreeMode, Pagination } from "swiper/modules";
 
 const Blog = () => {
   return (
@@ -11,56 +12,67 @@ const Blog = () => {
           Blog
         </h1>
       </div>
-      <div>
-        <Swiper
-          slidesPerView={4}
-          spaceBetween={20}
-          className="mySwiper"
-          breakpoints={{
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 20,
-            },
+      <div className="max-w-screen-2xl mx-auto px-4">
+        <div>
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={1}
+            className="mySwiper"
+            breakpoints={{
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 5,
+              },
 
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 5,
+              },
 
-            0: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-          }}
-        >
-          <SwiperSlide>
-            <BlogSwiper img={"/blog1.png"} text="Lorem ipsom dolor" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BlogSwiper
-              img={"/image2.jpg"}
-              text="Consectetur adipiscing sed do"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BlogSwiper img={"/blog1.png"} text="Lorem ipsom dolor" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BlogSwiper img={"/image2.jpg"} text="Minim veniam, quis nostrud" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BlogSwiper img={"/blog1.png"} text="Lorem ipsom dolor" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BlogSwiper img={"/image2.jpg"} text="Minim veniam, quis nostrud" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BlogSwiper img={"/blog1.png"} text="Lorem ipsom dolor" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BlogSwiper img={"/image2.jpg"} text="Minim veniam, quis nostrud" />
-          </SwiperSlide>
-        </Swiper>
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 5,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <BlogSwiper img={"/blog1.png"} text="Lorem ipsom dolor" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogSwiper
+                img={"/image2.jpg"}
+                text="Consectetur adipiscing sed do"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogSwiper img={"/blog1.png"} text="Lorem ipsom dolor" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogSwiper
+                img={"/image2.jpg"}
+                text="Minim veniam, quis nostrud"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogSwiper img={"/blog1.png"} text="Lorem ipsom dolor" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogSwiper
+                img={"/image2.jpg"}
+                text="Minim veniam, quis nostrud"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogSwiper img={"/blog1.png"} text="Lorem ipsom dolor" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BlogSwiper
+                img={"/image2.jpg"}
+                text="Minim veniam, quis nostrud"
+              />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </div>
   );

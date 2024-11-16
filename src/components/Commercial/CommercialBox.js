@@ -1,7 +1,7 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa";
 
-const CommercialBox = () => {
+const CommercialBox = ({ text }) => {
   return (
     <div className="group comercial">
       <div className="relative">
@@ -11,7 +11,7 @@ const CommercialBox = () => {
           </h3>
           <div className="w-[280px] h-[350px] bg-[url(/commer1.jpg)] relative comercial-imgbox mx-auto md:mx-0">
             <p className="text-white text-center text-[32px] font-normal leading-[42px] tracking-[0.32px] absolute bottom-10 -left-10">
-              Residential{" "}
+              {text}
             </p>
           </div>
         </div>

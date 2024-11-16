@@ -6,6 +6,7 @@ import Commercial from "./components/Commercial/Commercial";
 import Blog from "./components/Blog/Blog";
 import Footer from "./components/Footer/Footer";
 import Map from "./components/Map/Map";
+import Responsive from "./components/Slider/Slider";
 
 const App = () => {
   return (

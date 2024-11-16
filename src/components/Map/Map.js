@@ -82,10 +82,9 @@ const Map = () => {
         </p>
         <div className="relative container mx-auto">
           <div className="relative">
-            {/* Map SVG */}
             <div className="items-center justify-center md:flex hidden relative">
               <img src="/bd.png" alt="Map" className="w-[506px] h-[700px]" />
-              {/* Markers */}
+
               {branches.map((branch) => (
                 <button
                   key={branch.id}
@@ -103,7 +102,6 @@ const Map = () => {
             </div>
           </div>
 
-          {/* Info Box */}
           {selectedBranch && (
             <div className="absolute top-[60%] left-[50%] w-[300px] p-5 bg-[#F0F0F0] shadow-lg border rounded-md z-50 transform -translate-x-1/2 -translate-y-1/2 ">
               <div className="flex gap-2.5 pb-4 border-b border-b-[#E6E2E1] relative">
