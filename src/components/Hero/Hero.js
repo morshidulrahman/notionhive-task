@@ -22,10 +22,10 @@ const Hero = () => {
       modules={[Navigation, Pagination, Autoplay]}
       className="md:h-[90vh] sm:h-[60vh] h-[90vh]"
       onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-      // autoplay={{
-      //   delay: 2000,
-      //   disableOnInteraction: false,
-      // }}
+      autoplay={{
+        delay: 2000,
+        disableOnInteraction: false,
+      }}
     >
       <SwiperSlide className="w-full h-full bg-[url(/Image1.png)] bg-no-repeat bg-cover">
         <div className="container mx-auto px-4">
