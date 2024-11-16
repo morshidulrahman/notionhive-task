@@ -4,7 +4,8 @@ const BlogSwiper = ({ text, img }) => {
   return (
     <div className="flex flex-col mr-10">
       <div
-        className={`object-cover w-[95%] md:w-[99.5%] h-[270px] bg-[url(${img})] flex justify-center items-center`}
+        style={{ backgroundImage: `url(${img})` }}
+        className={`object-cover w-[95%] md:w-[99.5%] h-[270px]  flex justify-center items-center`}
       >
         <div className="bg-[#EA4715] w-16 h-16 rounded-full flex justify-center items-center   right-4 bottom-4">
           <FaPlus className="text-white h-5 w-5" />

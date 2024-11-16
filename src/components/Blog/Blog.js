@@ -1,8 +1,7 @@
 import React from "react";
-import { FaPlus } from "react-icons/fa";
+
 import { SwiperSlide, Swiper } from "swiper/react";
 import BlogSwiper from "./BlogSwiper";
-import { FreeMode, Pagination } from "swiper/modules";
 
 const Blog = () => {
   return (
@@ -12,7 +11,7 @@ const Blog = () => {
           Blog
         </h1>
       </div>
-      <div className="max-w-screen-2xl mx-auto px-4">
+      <div className="max-w-screen-2xl mx-auto px-4  ">
         <div>
           <Swiper
             slidesPerView={3}
